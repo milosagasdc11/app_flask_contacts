@@ -15,8 +15,8 @@ app.secret_key= 'mysecretkey'
 # configuration used to connect to MariaDB
 config = {
     'host': '127.0.0.1',
-    'port': 3306,
-    'user': 'milosagasdc11',
+    'port': 'db',
+    'user': 'root',
     'password': 'Milosqui11',
     'database': 'flask_contacts'
 }

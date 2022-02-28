@@ -15,6 +15,3 @@ jobs:
           heroku_app_name: "flask-contacts-ayds2" #Must be unique in Heroku
           heroku_email: "milosagastume11@gmail.com"
           usedocker: true
-      - name: Install dependencies
-        run: | 
-        pip install -r Requeriments.txt
