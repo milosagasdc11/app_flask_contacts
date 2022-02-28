@@ -1,1 +1,1 @@
-web: waitress-serve  --host='0.0.0.0' python main.py
+web: waitress-serve  --host='0.0.0.0' -p $PORT python main.py
