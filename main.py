@@ -105,6 +105,7 @@ def update_contact(id, fullname, phone, email):
 
 
 #run de appp
-port = os.environ.get('PORT', 5000)
-app.run(debug=False, host='0.0.0.0', port=port)
+if __name__ == "__main__":
+    port = os.environ.get('PORT', 5000)
+    app.run(debug=False, host='0.0.0.0', port=port)
     
