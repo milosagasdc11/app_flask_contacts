@@ -1,6 +1,6 @@
 #Importamos flask, mariadb y render
 import flask
-from flask import render_template, request, redirect,  url_for, flash
+from flask import render_template, request, redirect,  url_for
 import mariadb
 
 
@@ -14,8 +14,8 @@ app.secret_key= 'mysecretkey'
 
 # configuration used to connect to MariaDB
 config = {
-    'host': '127.0.0.1',
-    'port': 'db',
+    'host': 'db',
+    'port': '3306',
     'user': 'root',
     'password': 'Milosqui11',
     'database': 'flask_contacts'
