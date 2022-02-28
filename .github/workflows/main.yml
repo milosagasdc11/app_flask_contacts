@@ -8,8 +8,8 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - name: CI Integration
       - uses: actions/checkout@v2
+      - name: CI Integration
       - name: Install dependencies
         run: pip install pytest
       - name: Testing
