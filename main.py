@@ -2,6 +2,7 @@
 import flask
 from flask import render_template, request, redirect,  url_for
 import mariadb
+import os
 
 
 
@@ -12,7 +13,6 @@ def create_app():
     return app
 
 app = create_app()
-app.config["DEBUG"] = False
 
 # Inicializamos la sesion
 app.secret_key = 'mysecretkey'
@@ -21,7 +21,7 @@ app.secret_key = 'mysecretkey'
 # configuration used to connect to MariaDB
 config = {
     'host': 'us-cdbr-east-05.cleardb.net', #us-cdbr-east-05.cleardb.net / 127.0.0.1
-    'port': '3306',
+    'port': 3306,
     'user': 'b6bfba089d9c10', #b6bfba089d9c10 / milosagasdc11
     'password': '7bb235fa', #7bb235fa / Milosqui11
     'database': 'heroku_bfc88f6e074916d' #heroku_bfc88f6e074916d / flask_contacts
@@ -105,5 +105,6 @@ def update_contact(id, fullname, phone, email):
 
 
 #run de appp
-app.run()
+port = os.environ.get('PORT', 5000)
+app.run(debug=False, host='0.0.0.0', port=port)
     
