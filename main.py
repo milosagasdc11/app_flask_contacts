@@ -1,7 +1,4 @@
 #Importamos flask, mariadb y render
-from base64 import urlsafe_b64decode
-from crypt import methods
-import json
 import flask
 from flask import render_template, request, redirect,  url_for, flash
 import mariadb
@@ -10,7 +7,7 @@ import mariadb
 
 #Creamos la app de flask
 app = flask.Flask(__name__)
-app.config["DEBUG"] = True
+app.config["DEBUG"] = False
 
 #Inicializamos la sesion
 app.secret_key= 'mysecretkey'
@@ -99,8 +96,6 @@ def update_contact(id, fullname, phone, email):
     (fullname, phone, email, id))
     conn.commit()
     print('Actualizado con exito')
-
-
 
 
 #run de appp
