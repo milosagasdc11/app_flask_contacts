@@ -8,16 +8,15 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - name: 'CI'
       - uses: actions/checkout@v2
-      - name: Install dependencies
+      - name: CI Integration
         run: pip install pytest
       - name: Testing
         run: pytest
-      - name: Deployment
       - uses: akhileshns/heroku-deploy@v3.12.12 # This is the action
         with:
           heroku_api_key: ${{secrets.HEROKU_API_KEY}}
           heroku_app_name: "flask-contacts-ayds2" #Must be unique in Heroku
           heroku_email: "milosagastume11@gmail.com"
           usedocker: true
+
