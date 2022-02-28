@@ -6,17 +6,23 @@ import mariadb
 
 
 #Creamos la app de flask
-app = flask.Flask(__name__)
+def create_app():
+    app = flask.Flask(__name__)
+
+    return app
+
+app = create_app()
 app.config["DEBUG"] = False
 
-#Inicializamos la sesion
-app.secret_key= 'mysecretkey'
+# Inicializamos la sesion
+app.secret_key = 'mysecretkey'
+
 
 # configuration used to connect to MariaDB
 config = {
-    'host': 'db',
-    'port': '3306',
-    'user': 'root',
+    'host': '127.0.0.1',
+    'port': 3306,
+    'user': 'milosagasdc11',
     'password': 'Milosqui11',
     'database': 'flask_contacts'
 }
