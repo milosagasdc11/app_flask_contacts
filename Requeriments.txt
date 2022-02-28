@@ -1,1 +1,2 @@
 flask==2.0.3
+mariadb_server==10.8.2-focal
