@@ -8,7 +8,7 @@ import os
 
 #Creamos la app de flask
 def create_app():
-    app = flask.Flask(__name__, template_folder='/templates')
+    app = flask.Flask(__name__, template_folder='templates/')
 
     return app
 

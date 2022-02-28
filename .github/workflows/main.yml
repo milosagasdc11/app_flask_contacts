@@ -1,4 +1,4 @@
-name: Deploy
+name: CI/CD
 on:
   push:
     branches:
@@ -8,11 +8,15 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
+      - name: 'CI'
       - uses: actions/checkout@v2
-      - name: CI Integration
-        run: pip install pytest
+      - name: Install dependencies
+        run: |
+        python -m pip install --upgrade pip
+        if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
       - name: Testing
         run: pytest
+      - name: Deployment
       - uses: akhileshns/heroku-deploy@v3.12.12 # This is the action
         with:
           heroku_api_key: ${{secrets.HEROKU_API_KEY}}
