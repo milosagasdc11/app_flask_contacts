@@ -11,7 +11,10 @@ jobs:
       - name: CI Integration
         run: pip install pytest
       - name: Testing
-        run: pytest 
+        run: |
+        pip install pytest
+        export PYTHONPATH=src
+        pytest
       - uses: actions/checkout@v2
       - uses: akhileshns/heroku-deploy@v3.12.12 # This is the action
         with:
