@@ -20,11 +20,11 @@ app.secret_key = 'mysecretkey'
 
 # configuration used to connect to MariaDB
 config = {
-    'host': '127.0.0.1',
+    'host': 'us-cdbr-east-05.cleardb.net', #us-cdbr-east-05.cleardb.net / 127.0.0.1
     'port': 3306,
-    'user': 'milosagasdc11',
-    'password': 'Milosqui11',
-    'database': 'flask_contacts'
+    'user': 'b6bfba089d9c10', #b6bfba089d9c10 / milosagasdc11
+    'password': '7bb235fa', #7bb235fa / Milosqui11
+    'database': 'heroku_bfc88f6e074916d' #heroku_bfc88f6e074916d / flask_contacts
 }
 
 # metodos para el enrutamiento
