@@ -1,4 +1,4 @@
-FROM continuumio/anaconda3:2020.11
+FROM python
 
 ADD . /code
 Workdir /code
