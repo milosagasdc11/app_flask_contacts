@@ -8,14 +8,11 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
+      - uses: actions/checkout@v2
       - name: CI Integration
         run: pip install pytest
       - name: Testing
-        run: |
-        pip install pytest
-        export PYTHONPATH=src
-        pytest
-      - uses: actions/checkout@v2
+        run: pytest
       - uses: akhileshns/heroku-deploy@v3.12.12 # This is the action
         with:
           heroku_api_key: ${{secrets.HEROKU_API_KEY}}
