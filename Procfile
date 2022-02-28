@@ -1,1 +1,1 @@
-web: python main.py
+web: waitress-serve --host='127.0.0.1' main:create_app
