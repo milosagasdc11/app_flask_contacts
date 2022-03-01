@@ -4,7 +4,7 @@ def test_app_is_created():
     assert 2+2 ==4
 
 def test_uno():
-    assert 2*1 ==2
+    assert 2*1 ==2100
 
 def test_dos():
     assert 2+6==8
